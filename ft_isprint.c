@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 21:50:00 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/15 21:50:08 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/17 12:26:46 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int	ft_isprint(int c)
 
 int	main()
 {
-	printf("%d\n", isprint(33));
-	printf("%d\n", ft_isprint(33));
-	printf("%d\n", isprint(31));
-	printf("%d\n", ft_isprint(31));
+	printf("%d\n", isprint(' '));
+	printf("%d\n", ft_isprint(' '));
+	printf("%d\n", isprint('\n'));
+	printf("%d\n", ft_isprint('\n'));
 }
 */

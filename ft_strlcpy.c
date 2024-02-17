@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 22:09:42 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/16 23:40:36 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/17 15:01:01 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	return (i);
 }
-/*#include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 
 int	main(void)
 {
 	char src[20] = "Hel";
 	char dest[20] = "Good bye";
-	size_t size = 4;
+	size_t size = 0;
     printf("%zu\n", ft_strlcpy(dest, src, size));
-    //printf("%zu\n", strlcpy(dest, src, size));
     return (0);
-}*/
+}

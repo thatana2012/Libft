@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 00:37:28 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/17 11:41:42 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/17 15:23:09 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
-	size_t	byte;
+	size_t	total_size;
 
-	byte = nmemb * size;
-	ptr = malloc(byte);
+	total_size = nmemb * size;
+	ptr = malloc(total_size);
 	if (ptr == NULL)
 		return (NULL);
-	ft_bzero(ptr, byte);
+	ft_bzero(ptr, total_size);
 	return (ptr);
 }
