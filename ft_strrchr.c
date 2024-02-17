@@ -6,13 +6,13 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 22:33:30 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/17 14:23:06 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/17 17:40:23 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	len;
 

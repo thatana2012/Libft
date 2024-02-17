@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 11:12:50 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/17 14:51:56 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/17 17:02:02 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (*little == NULL || little[0] == '\0')
+	if (little == NULL || little[0] == '\0')
 		return ((char *)big);
 	i = 0;
 	while (big[i] != '\0' && i < len)
