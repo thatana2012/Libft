@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 15:01:49 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/16 14:09:28 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/17 11:43:17 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*d;
 	char	*s;
-	size_t		i;
+	size_t	i;
 
 	i = 0;
 	d = (char *)dest;

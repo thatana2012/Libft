@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 16:40:35 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/16 13:16:57 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/17 11:32:58 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -52,4 +52,4 @@ int	main(void)
 	ft_memmove(second + 2, first, 5);
 	printf("memmove overlap: %s\n", src);
 	return (0);
-}
+}*/

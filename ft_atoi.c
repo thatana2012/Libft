@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 14:42:40 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/16 23:20:26 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/17 11:34:00 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -47,4 +47,4 @@ int	main(void)
 	printf("%d\n", i);
 	printf("%d\n", ori);
 	return (0);
-}
+}*/
