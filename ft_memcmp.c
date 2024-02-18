@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 10:00:13 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/16 11:10:20 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/18 12:24:53 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*temp1;
 	char	*temp2;
 
