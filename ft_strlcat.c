@@ -6,33 +6,37 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 22:54:51 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/17 11:41:14 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/19 16:34:37 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	dstlen;
-	size_t	srclen;
-	size_t	i;
+	size_t		src_len;
+	size_t		dest_len;
+	size_t		total_len;
+	const char	*s;
 
-	if (size == 0 && dst == NULL)
+	if ((!dest || !src) && !size)
 		return (0);
-	dstlen = ft_strlen(dst);
-	srclen = ft_strlen(src);
-	i = 0;
-	if (size - 1 < dstlen)
-		return (size + srclen);
-	while (src[i] != '\0' && dstlen < size - 1)
+	s = src;
+	src_len = ft_strlen(s);
+	dest_len = 0;
+	while (*(dest + dest_len) && dest_len < size)
+		dest_len++;
+	if (dest_len >= size)
+		return (size + src_len);
+	else
+		total_len = dest_len + src_len;
+	while (*s && (dest_len + 1) < size)
 	{
-		dst[dstlen] = src[i];
-		i++;
-		dstlen++;
+		*(dest + dest_len) = *s++;
+		dest_len++;
 	}
-	dst[dstlen] = '\0';
-	return (dstlen + srclen);
+	*(dest + dest_len) = '\0';
+	return (total_len);
 }
 /*
 #include <stdio.h>
@@ -43,6 +47,5 @@ int main()
     char dst[20] = "Hi There";
     size_t size =  0;
     
-    printf("%zu\n", ft_strlcat(dst, src, size));
-    //printf("%zu\n", strlcat(dst, src, size)); 
+    printf("%d\n", (int)ft_strlcat(dst, src, size));
 }*/
