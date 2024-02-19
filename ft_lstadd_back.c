@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/18 16:51:59 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/19 09:12:00 by tjerdnap         ###   ########.fr       */
+/*   Created: 2024/02/19 08:55:32 by tjerdnap          #+#    #+#             */
+/*   Updated: 2024/02/19 14:05:34 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
+	t_list	*temp;
+
 	if (!new || !*lst)
 		return ;
-	new->next = *lst;
-	*lst = new;
+	if (!(*lst))
+	{
+		*lst = new;
+		return ;
+	}
+	temp = *lst;
+	while (temp->next)
+		temp = temp->next;
+	temp->next = new;
 }
 /*
 #include <stdio.h>
@@ -37,9 +46,9 @@ int main(void)
 {
     // Creating a sample linked list with nodes 2, 3, 4
     t_list *list = ft_lstnew("Node 1");
-    ft_lstadd_front(&list, ft_lstnew("Node 2"));
-    ft_lstadd_front(&list, ft_lstnew("Node 3"));
-    ft_lstadd_front(&list, ft_lstnew("Node 4"));
+    ft_lstadd_back(&list, ft_lstnew("Node 2"));
+    ft_lstadd_back(&list, ft_lstnew("Node 3"));
+    ft_lstadd_back(&list, ft_lstnew("Node 4"));
     
     // Printing the contents of the linked list
     t_list *current = list;
@@ -58,4 +67,5 @@ int main(void)
     }
     
     return 0;
-}*/
+}
+*/
