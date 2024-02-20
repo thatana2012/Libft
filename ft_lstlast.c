@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 17:48:15 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/18 18:21:53 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/20 12:33:02 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
-		return (NULL);
+		return (0);
 	while (lst->next)
 		lst = lst->next;
 	return (lst);

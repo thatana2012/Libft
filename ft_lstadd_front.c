@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 16:51:59 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/19 09:12:00 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/20 08:17:51 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!new || !*lst)
-		return ;
 	new->next = *lst;
 	*lst = new;
 }

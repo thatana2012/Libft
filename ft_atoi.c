@@ -6,17 +6,25 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 14:42:40 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/17 11:34:00 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/20 09:41:50 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static	int	ft_overflow(long s)
+{
+	if (s > 0)
+		return (-1);
+	else
+		return (0);
+}
+
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	sign;
-	int	result;
+	size_t	i;
+	long	sign;
+	long	result;
 
 	i = 0;
 	sign = 1;
@@ -33,6 +41,8 @@ int	ft_atoi(const char *nptr)
 	{
 		result = (nptr[i] - '0') + (result * 10);
 		i++;
+		if (result < 0)
+			return (ft_overflow(sign));
 	}
 	return (result * sign);
 }
@@ -41,10 +51,11 @@ int	ft_atoi(const char *nptr)
 
 int	main(void)
 {
-	char *c = "9223372036854775819";
+	char *c = "-9223372036854775809";
 	int	i = ft_atoi(c);
 	int	ori = atoi(c);
-	printf("%d\n", i);
-	printf("%d\n", ori);
+	printf("ft_: %d\n", i);
+	printf("orr: %d\n", ori);
 	return (0);
-}*/
+}
+*/
