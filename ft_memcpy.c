@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 15:01:49 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/17 11:43:17 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/20 16:14:03 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*d;
-	char	*s;
-	size_t	i;
+	unsigned char	*d;
+	unsigned char	*s;
+	size_t			i;
 
+	if (!dest && !src)
+		return (NULL);
 	i = 0;
-	d = (char *)dest;
-	s = (char *)src;
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
 	while (i < n)
 	{
 		d[i] = s[i];
@@ -29,12 +31,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 /*
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
-int	main()
+int	main(void)
 {
-	char src[100] = "Hello12345";
+	char	src[100] = "Hello12345";
+
 	char *first, *second, *temp;
 	temp = src;
 	first = src;

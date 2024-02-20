@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 16:40:35 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/17 22:20:35 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/20 14:24:47 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*temp_dest;
 	unsigned char	*temp_src;
 
+	if (!dest && !src)
+		return (NULL);
 	temp_dest = (unsigned char *)dest;
 	temp_src = (unsigned char *)src;
 	len = n;
