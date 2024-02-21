@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 16:40:35 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/20 14:24:47 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/21 08:12:29 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,20 +39,20 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-#include <stdio.h>
-#include <string.h>
 
-int	main(void)
-{
-	char src[100] = "He12345";
-	char *first, *second;
-	first = src;
-	second = src;
-	printf("Ori: %s\n", src);
-	memcpy(first + 4, first, 8);
-	printf("memcpy overlap:  %s\n", src);
-	ft_memmove(second + 4, first, 8);
-	printf("memmove overlap: %s\n", src);
-	return (0);
-}*/
+// #include <stdio.h>
+// #include <string.h>
+
+// int	main(void)
+// {
+// 	char src[100] = "He12345";
+// 	char *first, *second;
+// 	first = src;
+// 	second = src;
+// 	printf("Ori: %s\n", src);
+// 	memcpy(first + 4, first, 8);
+// 	printf("memcpy overlap:  %s\n", src);
+// 	ft_memmove(second + 4, first, 8);
+// 	printf("memmove overlap: %s\n", src);
+// 	return (0);
+// }

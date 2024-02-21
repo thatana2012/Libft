@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:37:50 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/15 21:49:40 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/20 22:15:22 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalpha(int c)
 {
-	if ((c > 'z' || c < 'a') && (c > 'Z' || c < 'A'))
-		return (0);
-	return (1);
+	if ((c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A'))
+		return (1);
+	return (0);
 }

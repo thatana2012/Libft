@@ -6,7 +6,7 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 08:33:58 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/16 11:10:46 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/21 10:07:45 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,30 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	char	*temp;
+	size_t			i;
+	unsigned char	*temp;
 
-	temp = (char *)s;
+	temp = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
-		if ((unsigned char)temp[i] == (unsigned char)c)
-			return ((char *)s + i);
+		if (temp[i] == (unsigned char)c)
+			return ((void *)&temp[i]);
 		i++;
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-#include <string.h>
 
-int	main(void)
-{
-	char s[30] = "Hello Hi lo";
-	char c1 = 'l';
-	char c2 = 'l';
-	size_t n = 10;
-	printf("%s\n", (char *)memchr(s + 4, c1, n));
-	printf("%s\n", (char *)ft_memchr(s + 4, c2, n));
-	return (0);
-}
-*/
+// #include <stdio.h>
+// #include <string.h>
+
+// int	main(void)
+// {
+// 	char s[30] = "Hello Hi lo";
+// 	char c1 = 'l';
+// 	char c2 = 'l';
+// 	size_t n = 5;
+// 	printf("%s\n", (char *)memchr(s, c1, n));
+// 	printf("%s\n", (char *)ft_memchr(s, c2, n));
+// 	return (0);
+// }
