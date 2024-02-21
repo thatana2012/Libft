@@ -6,55 +6,12 @@
 /*   By: tjerdnap <tjerdnap@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 16:27:33 by tjerdnap          #+#    #+#             */
-/*   Updated: 2024/02/17 17:36:39 by tjerdnap         ###   ########.fr       */
+/*   Updated: 2024/02/21 12:50:31 by tjerdnap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < size - 1 && src[i] != '\0')
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (i < size)
-		dst[i] = '\0';
-	while (src[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s)
-	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
-	}
-	if (c == '\0')
-		return ((char *)s);
-	return (NULL);
-}
-*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*new;
@@ -75,7 +32,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 /*
 #include <stdio.h>
-int	main()
+
+int	main(void)
 {
 	char	str[20] = "abcdefabjb";
 	char	set[20] = "bcf";
